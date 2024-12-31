@@ -19,12 +19,11 @@ public class Main {
         rs.addVehicle(tr);
 
 
-//        System.out.println();
-//        System.out.println("===== Welcome To Vehicle Rental System =====");
-//        System.out.println("TO PROCEED");
-//        System.out.println("PLEASE PROVIDE YOUR DETAILS");
-//        //calling the method customer Details from rental Service to take customer details
-//        rs.customerDetails();
+        System.out.println();
+        System.out.println("===== Welcome To Vehicle Rental System =====");
+        System.out.println("TO PROCEED");
+        System.out.println("PLEASE PROVIDE YOUR DETAILS");
+        rs.customerDetails();
 
 
         System.out.println("Enter your choice to proceed now");
@@ -93,6 +92,18 @@ public class Main {
                 rs.rented();
             }
             break;
+
+            case 3: {
+                System.out.println("Thank you for using the Vehicle Rental System. Goodbye!");
+                in.close();
+                System.exit(0);
+            }
+            default:
+                System.out.println("Invalid choice. Please enter valid option...");
+                //USING RECURSION TO CALL THE METHOD AGAIN WHEN THE USER INPUTS WRONG DETAILS
+                Main.main(args);
+
+
 
 
         }
